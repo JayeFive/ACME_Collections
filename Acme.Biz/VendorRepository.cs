@@ -53,6 +53,17 @@ namespace Acme.Biz
             return vendors;
         }
 
+        public Dictionary<string, Vendor> RetrieveWithKeys()
+        {
+            var vendors = new Dictionary<string, Vendor>()
+            {
+                { "ABC Corp", new Vendor() { VendorId = 1, CompanyName = "ABC Corp", Email = "abc@abc.com" } },
+                { "XYZ Inc", new Vendor() { VendorId = 2, CompanyName = "XYZ Corp", Email = "xyz@xyz.com" } },
+            };
+
+            return vendors;
+        }
+
         /// <summary>
         /// Save data for one vendor.
         /// </summary>
