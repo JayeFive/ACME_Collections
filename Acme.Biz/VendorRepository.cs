@@ -44,7 +44,7 @@ namespace Acme.Biz
         {
             if (vendors == null)
             {
-                var vendors = new List<Vendor>();
+                vendors = new List<Vendor>();
 
                 vendors.Add(new Vendor() { VendorId = 1, CompanyName = "ABC Corp", Email = "abc@abc.com" });
                 vendors.Add(new Vendor() { VendorId = 2, CompanyName = "XYZ Corp", Email = "xyz@xyz.com" });
