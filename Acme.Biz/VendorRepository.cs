@@ -40,18 +40,7 @@ namespace Acme.Biz
             return value;
         }
 
-        public Vendor[] RetrieveArray()
-        {
-            var vendors = new Vendor[2]
-            {
-                new Vendor(){ VendorId = 1, CompanyName = "ABC Corp", Email = "abc@abc.com" },
-                new Vendor(){ VendorId = 2, CompanyName = "XYZ Inc", Email = "xyz@xyz.com" },
-            };
-
-            return vendors;
-        }
-
-        public List<Vendor> Retrieve()
+        public ICollection<Vendor> Retrieve()
         {
             if (vendors == null)
             {
@@ -64,16 +53,6 @@ namespace Acme.Biz
             return vendors;
         }
 
-        public Dictionary<string, Vendor> RetrieveWithKeys()
-        {
-            var vendors = new Dictionary<string, Vendor>()
-            {
-                { "ABC Corp", new Vendor() { VendorId = 1, CompanyName = "ABC Corp", Email = "abc@abc.com" } },
-                { "XYZ Inc", new Vendor() { VendorId = 2, CompanyName = "XYZ Inc", Email = "xyz@xyz.com" } },
-            };
-
-            return vendors;
-        }
 
         /// <summary>
         /// Save data for one vendor.
