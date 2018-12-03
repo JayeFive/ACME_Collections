@@ -69,7 +69,7 @@ namespace Acme.Biz
             var vendors = new Dictionary<string, Vendor>()
             {
                 { "ABC Corp", new Vendor() { VendorId = 1, CompanyName = "ABC Corp", Email = "abc@abc.com" } },
-                { "XYZ Inc", new Vendor() { VendorId = 2, CompanyName = "XYZ Corp", Email = "xyz@xyz.com" } },
+                { "XYZ Inc", new Vendor() { VendorId = 2, CompanyName = "XYZ Inc", Email = "xyz@xyz.com" } },
             };
 
             return vendors;
