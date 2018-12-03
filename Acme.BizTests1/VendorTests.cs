@@ -45,5 +45,24 @@ namespace Acme.Biz.Tests
             //Assert
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void SendMailTestArray()
+        {
+            //Arrange
+            var vendorRepository = new VendorRepository();
+            var vendors = vendorRepository.RetrieveArray();
+            var expected = new List<string>()
+            {
+                "Message sent: Important message for: ABC Corp",
+                "Message sent: Important message for: XYZ Inc"
+            };
+
+            //Act
+            var actual = Vendor.SendEmail(vendors, "Test message");
+
+            //Assert
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }
