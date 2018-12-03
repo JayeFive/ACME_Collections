@@ -40,7 +40,7 @@ namespace Acme.Biz
             return value;
         }
 
-        public ICollection<Vendor> Retrieve()
+        public IEnumerable<Vendor> Retrieve()
         {
             if (vendors == null)
             {
@@ -53,6 +53,17 @@ namespace Acme.Biz
             return vendors;
         }
 
+        public IEnumerable<Vendor> RetrieveWithIterator()
+        {
+            // Get data from database
+            this.Retrieve();
+
+            foreach (var vendor in vendors)
+            {
+                Console.WriteLine($"Vendor ID: {vendor.VendorId}");
+                yield return vendor;
+            }
+        }
 
         /// <summary>
         /// Save data for one vendor.
